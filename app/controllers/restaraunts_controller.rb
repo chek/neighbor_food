@@ -19,6 +19,10 @@ class RestarauntsController < ApplicationController
 	]
 
 	def index
-		@restaraunts = RESTARAUNTS
+		if params[:type]
+			@restaraunts = RESTARAUNTS.select{|r| r[:type] == params[:type] }
+		else
+			@restaraunts = RESTARAUNTS
+		end
 	end
 end
