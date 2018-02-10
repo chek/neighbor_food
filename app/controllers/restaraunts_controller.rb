@@ -33,4 +33,9 @@ class RestarauntsController < ApplicationController
 		#restaraunt.save
 		render plain: "Creating new restaraunt #{params[:name]}"
 	end
+
+	def show
+		#@restaraunt = Restaraunt.find(params[:id])
+		@restaraunt = RESTARAUNTS[params[:id].to_i]
+	end
 end

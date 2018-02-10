@@ -5,6 +5,8 @@ Rails.application.routes.draw do
 
   get 'restaraunts', to: 'restaraunts#index'
 
+  get 'restaraunts/:id', to: 'restaraunts#show'
+
   post 'restaraunts', to: 'restaraunts#create'
 
   root to: 'pages#home'
