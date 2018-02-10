@@ -25,4 +25,12 @@ class RestarauntsController < ApplicationController
 			@restaraunts = RESTARAUNTS
 		end
 	end
+
+	def create
+		#params[:name]
+		#params[:address]
+		#restaraunt = Restaraunt.new(:name => params[:name], :address => params[:address])
+		#restaraunt.save
+		render plain: "Creating new restaraunt #{params[:name]}"
+	end
 end
