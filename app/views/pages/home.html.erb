@@ -1,1 +1,11 @@
 <h1>Home page</h1>
+
+<p>Today is <%= Time.now.strftime('%d/%m/%Y') %> </p>
+
+<ul>
+	<% @categories.each{ |c| %>
+	<li>
+		<%= c %>
+	</li>
+	<% } %>
+</ul>

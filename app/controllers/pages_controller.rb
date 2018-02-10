@@ -6,5 +6,6 @@ class PagesController < ApplicationController
   end
 
   def home
+  	@categories = ['cafe', 'piza', 'hotpot']
   end
 end

@@ -1,0 +1,8 @@
+<h1>Restaraunts list</h1> 
+<ul>
+<% @restaraunts.each{ |r| %>
+	<li>
+		<%= r[:name] %> (<%= r[:address] %>)
+	</li>
+<% } %>
+</ul>
